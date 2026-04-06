@@ -30,10 +30,10 @@ function Home() {
         <h3 className="uni">Class of 2027</h3>
         <div id="imp">
           <a href="https://github.com/VincenzoMonterosso">
-            <img src="github.png" id="linked" alt="GitHub" />
+            <img src="../images/github.png" id="linked" alt="GitHub" />
           </a>
           <a href="https://www.linkedin.com/in/vincenzo-monterosso-03266828a/">
-            <img src="linked.png" alt="LinkedIn" />
+            <img src="../images/linked.png" alt="LinkedIn" />
           </a>
         </div>
       </div>
