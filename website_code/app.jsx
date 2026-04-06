@@ -44,7 +44,22 @@ function Profile() {
 
 function AboutMe() {
   return (
+    <div id="aboutMe">
+    <h3>About Me</h3>
+      <div>
+        <p>Hi, I am Vincenzo Monterosso. A Computer Science student at Hunter College who's an aspiring Fullstack Software Engineer.<br /></p>
+        
+        <h3>Why Do I Study Computer Science?</h3>
+        <p>
+          As a kid I was always obsessed with games on Cool Math Games, espescially the run series. Due to this obsession I had always wanted to create a videogame of some sorts.
+          Then during the COVID-19 pandemic. In what was nothing more then an experiment at the time I grouped up with some friends and begin creating a Roblox Train Simulator.
+          As development progressed, we began adding more and more features which geared the game for release, so suddenly the game opening up to the public became a possibility.
+          Now after Schools had reopened I found out about my schools Software Engineering Program (SEP). I signed up for this program, and due to the classes being geared towards web development, I fell in love with fullstack development.
+          Thus, Computer Science choose me once I got to college.
+        </p>
 
+      </div>
+    </div>
   );
 }
 
@@ -56,6 +71,7 @@ function App() {
     <>
       <TopNav activeTab={activeTab} onSelect={setActiveTab} />
       <Profile />
+      <AboutMe />
     </>
   );
 }

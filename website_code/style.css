@@ -98,3 +98,15 @@ h3 {
     width: 100px !important;
     margin-top: 0;
 }
+
+#aboutMe {
+    border: black solid 1px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 16px;
+}
+
+#aboutMe h3 {
+    margin-top: 0;
+}
