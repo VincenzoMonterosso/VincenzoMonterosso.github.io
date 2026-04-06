@@ -16,7 +16,7 @@ function TopNav({ activeTab, onSelect }) {
   );
 }
 
-function Profile() {
+function Home() {
   return (
     <div id="all">
       <div id="iden">
@@ -36,7 +36,6 @@ function Profile() {
             <img src="linked.png" alt="LinkedIn" />
           </a>
         </div>
-        <div id="useless"></div>
       </div>
     </div>
   );
@@ -55,7 +54,7 @@ function AboutMe() {
           Then during the COVID-19 pandemic. In what was nothing more then an experiment at the time I grouped up with some friends and begin creating a Roblox Train Simulator.
           As development progressed, we began adding more and more features which geared the game for release, so suddenly the game opening up to the public became a possibility.
           Now after Schools had reopened I found out about my schools Software Engineering Program (SEP). I signed up for this program, and due to the classes being geared towards web development, I fell in love with fullstack development.
-          Thus, Computer Science choose me once I got to college.
+          Thus, Computer Science chose me once I got to college.
         </p>
 
       </div>
@@ -65,13 +64,14 @@ function AboutMe() {
 
 function App() {
   const [activeTab, setActiveTab] = React.useState("Home");
-  const currentYear = new Date().getFullYear();
 
   return (
     <>
       <TopNav activeTab={activeTab} onSelect={setActiveTab} />
-      <Profile />
-      <AboutMe />
+      {activeTab === "Home" && <Home />}
+      {activeTab === "Home" && <AboutMe />}
+      {activeTab === "Projects" && <Projects />}
+      {activeTab === "Education" && <AboutMe />}
     </>
   );
 }

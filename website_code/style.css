@@ -1,23 +1,25 @@
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
 }
-#name {
-    font-size: 50px !important;
+
+#root {
+    padding-top: 110px;
 }
+
+#name {
+    font-size: 50px;
+}
+
 h1 {
     font-size: 150%;
     margin-bottom: 40px;
 }
 
-h3 {
-    margin-top: -20px;
-}
-
 #top {
-    z-index: 1 !important;
-    padding-top: 40px;
+    z-index: 1;
+    padding: 24px 0;
     background-color: #313131;
     color: white;
     display: flex;
@@ -26,87 +28,78 @@ h3 {
     border-bottom-width: 5px;
     width: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
 }
+
 #all {
     display: flex;
-    margin-bottom: 55px;
-    position: relative;
-    top: 20px;
-    --div-width: 250px;
-    
+    justify-content: center;
+    margin-bottom: 32px;
 }
 
 #iden {
-    flex: 50%;
     text-align: center;
-    position: relative;
-    top: 55px !important;
     padding-bottom: 40px;
     font-size: large;
-    margin-left: 10px;
-    width: 600px !important;
-    /* border: 3px solid black; */
-    /* margin-top: 20px !important; */
+    width: min(600px, calc(100% - 32px));
 }
 
-#me {
-    height: 50px;
-    position: relative;
-    top: 40px !important;
-    height: 20%;
-    border-radius: 50% !important;
-    border: 3px solid black;
-}
 .uni {
-    position: relative;
-    top: 50px;
-    font-size: 30px !important;
+    font-size: 30px;
+    margin: 0 0 12px 0;
 }
-.lang {
-    height: 50em !important;
-    
-}
-#person {
-    border: #313131;
-    border-width: 10px;
-    border-radius: 50%;
-}
+
 .h:hover {
     color: aqua;
     text-decoration: underline;
 }
+
 .h {
     cursor: pointer;
+    margin: 0;
 }
+
 .h.active {
     color: aqua;
     text-decoration: underline;
 }
 
 #imp {
-    flex: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     height: 100px;
-    margin-top: 50px;
+    margin-top: 32px;
     width: 100%;
 }
 
-#imp a img{
-    width: 100px !important;
+#imp a img {
+    width: 100px;
     margin-top: 0;
 }
 
 #aboutMe {
     border: black solid 1px;
     border-radius: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 0 5px;
     padding: 16px;
 }
 
 #aboutMe h3 {
+    margin-top: 0;
+}
+
+#projects {
+    margin: 0 auto;
+    padding: 16px;
+    width: min(900px, calc(100% - 32px));
+    border: black solid 1px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#projects h3 {
     margin-top: 0;
 }
