@@ -1,31 +1,42 @@
+html,
 body {
+    min-height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #000;
+}
+
+body {
+    min-height: 100vh;
     overflow-x: hidden;
+    background-color: #000;
+    background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.12) 180px, rgba(0, 0, 0, 0) 320px),
+        url("./bg.png");
+    background-position: top center, top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 320px, cover;
+    background-attachment: scroll, fixed;
 }
 
 #root {
     padding-top: 110px;
+    min-height: calc(100vh - 110px);
 }
 
 #name {
     font-size: 50px;
-}
-
-h1 {
-    font-size: 150%;
     margin-bottom: 40px;
 }
 
 #top {
     z-index: 1;
     padding: 24px 0;
-    background-color: #313131;
+    background-color: black;
     color: white;
     display: flex;
     justify-content: space-evenly;
-    border-bottom: black;
-    border-bottom-width: 5px;
+    border-bottom: 1px solid purple;
     width: 100%;
     position: fixed;
     top: 0;
@@ -36,6 +47,15 @@ h1 {
     display: flex;
     justify-content: center;
     margin-bottom: 32px;
+    width: min(900px, calc(100% - 32px));
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px;
+    box-sizing: border-box;
+    border: purple solid 1px;
+    border-radius: 10px;
+    background: black;
+    color: white;
 }
 
 #iden {
@@ -50,19 +70,59 @@ h1 {
     margin: 0 0 12px 0;
 }
 
-.h:hover {
-    color: aqua;
-    text-decoration: underline;
+@keyframes navSwipe {
+    0% {
+        transform: translateX(-140%);
+        opacity: 0;
+    }
+    35% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(140%);
+        opacity: 0;
+    }
 }
 
 .h {
     cursor: pointer;
     margin: 0;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 22px;
+    border-radius: 999px;
+    transition: color 180ms ease, text-shadow 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.h::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background:
+        radial-gradient(circle at center, rgba(208, 130, 255, 0.38) 0%, rgba(208, 130, 255, 0.16) 35%, rgba(208, 130, 255, 0) 70%),
+        linear-gradient(110deg, rgba(122, 0, 255, 0) 0%, rgba(190, 73, 255, 0.72) 42%, rgba(235, 183, 255, 0.95) 50%, rgba(190, 73, 255, 0.72) 58%, rgba(122, 0, 255, 0) 100%);
+    transform: translateX(-140%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.h:hover {
+    color: #f3dcff;
+    text-shadow: 0 0 12px rgba(216, 134, 255, 0.95);
+    box-shadow: inset 0 0 0 1px rgba(218, 143, 255, 0.4), 0 0 22px rgba(174, 73, 255, 0.22);
+    background-color: rgba(91, 33, 122, 0.22);
+}
+
+.h:hover::before {
+    animation: navSwipe 650ms ease;
 }
 
 .h.active {
-    color: aqua;
+    color: #e9b8ff;
     text-decoration: underline;
+    text-shadow: 0 0 10px rgba(214, 121, 255, 0.82);
+    background-color: rgba(91, 33, 122, 0.28);
 }
 
 #imp {
@@ -81,10 +141,12 @@ h1 {
 }
 
 #aboutMe {
-    border: black solid 1px;
+    color: white;
+    border: purple solid 1px;
     border-radius: 10px;
     margin: 0 5px;
     padding: 16px;
+    background: black;
 }
 
 #aboutMe h3 {
@@ -95,9 +157,11 @@ h1 {
     margin: 0 auto;
     padding: 16px;
     width: min(900px, calc(100% - 32px));
-    border: black solid 1px;
+    border: purple solid 1px;
     border-radius: 10px;
     box-sizing: border-box;
+    background: black;
+    color: white;
 }
 
 #projects h3 {
